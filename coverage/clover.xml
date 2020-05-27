@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1590578427524" clover="3.2.0">
+  <project timestamp="1590578427524" name="All files">
+    <metrics statements="37" coveredstatements="35" conditionals="26" coveredconditionals="20" methods="5" coveredmethods="4" elements="68" coveredelements="59" complexity="0" loc="37" ncloc="37" packages="1" files="1" classes="1"/>
+    <file name="index.js" path="C:\Users\zhangtian\Project\Villain\web\craco-scoped-less\index.js">
+      <metrics statements="37" coveredstatements="35" conditionals="26" coveredconditionals="20" methods="5" coveredmethods="4"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="2" type="cond" truecount="3" falsecount="0"/>
+      <line num="7" count="2" type="stmt"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="1" type="cond" truecount="3" falsecount="1"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="16" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="26" count="5" type="stmt"/>
+      <line num="27" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="28" count="4" type="cond" truecount="1" falsecount="1"/>
+      <line num="29" count="4" type="stmt"/>
+      <line num="31" count="4" type="cond" truecount="1" falsecount="1"/>
+      <line num="32" count="4" type="stmt"/>
+      <line num="34" count="4" type="stmt"/>
+      <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="39" count="4" type="stmt"/>
+      <line num="45" count="4" type="cond" truecount="1" falsecount="1"/>
+      <line num="46" count="4" type="stmt"/>
+      <line num="48" count="0" type="stmt"/>
+      <line num="51" count="1" type="stmt"/>
+      <line num="54" count="4" type="stmt"/>
+      <line num="55" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="56" count="1" type="stmt"/>
+      <line num="59" count="3" type="stmt"/>
+      <line num="61" count="5" type="cond" truecount="3" falsecount="0"/>
+      <line num="65" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="66" count="1" type="stmt"/>
+      <line num="68" count="2" type="stmt"/>
+      <line num="71" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
