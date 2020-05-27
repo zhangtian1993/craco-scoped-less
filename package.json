@@ -1,0 +1,12 @@
+{
+  "name": "craco-scoped-less",
+  "version": "1.0.0",
+  "description": "在craco-plugin-scoped-css的基础上添加less格式的支持",
+  "main": "index.js",
+  "repository": "git@github.com:villaincoder/craco-scoped-less.git",
+  "author": "张添 <villaincoder@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@craco/craco": "^5.6.4"
+  }
+}
