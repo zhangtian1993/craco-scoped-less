@@ -16,7 +16,7 @@ const addScopedCssLoader = targetRule => {
     const scopedCssRule = { loader: require.resolve('scoped-css-loader') };
     rules.splice(cssLoaderIndex + 1, 0, scopedCssRule);
   } else {
-    return console.error('no css-loader found');
+    throw new Error('no css-loader found');
   }
 }
 
@@ -25,10 +25,10 @@ module.exports = {
     const { isFound, match } = getLoader(webpackConfig, loaderByName('babel-loader'))
     if (isFound) {
       const pluginIndex = match.loader.options.plugins.findIndex(
-        p => p === 'babel-plugin-react-scoped-css'
+        p => typeof p === 'string' && p.indexOf('babel-plugin-react-scoped-css') !== -1
       );
       if (pluginIndex === -1) {
-        return console.error('no babel-plugin-react-scoped-css found');
+        throw new Error('no babel-plugin-react-scoped-css found');
       }
       match.loader.options.plugins[pluginIndex] = [
         'babel-plugin-react-scoped-css',
@@ -37,14 +37,14 @@ module.exports = {
         }
       ];
     } else {
-      return console.error('no babel loader found');
+      throw new Error('no babel loader found');
     }
 
     // add scoped-css-loader
     const oneOfRule = webpackConfig.module.rules.find(rule => rule.oneOf);
     if (!oneOfRule) {
-      return console.error(
-        "Can't find a 'oneOf' rule under module.rules in the " + `${env} webpack config!`,
+      throw new Error(
+        "Can't find a 'oneOf' rule under module.rules in the " + `${env} webpack config! ` +
         'webpack+rules+oneOf',
       );
     }
@@ -56,8 +56,8 @@ module.exports = {
         rule.test.toString().indexOf('.module') === -1
     );
     if (!lessRule) {
-      return console.error(
-        "Can't find the webpack rule to match css files in the " + `${env} webpack config!`
+      throw new Error(
+        `Can't find the webpack rule to match css files in the ${env} webpack config!`
       );
     } else {
       addScopedCssLoader(lessRule);
